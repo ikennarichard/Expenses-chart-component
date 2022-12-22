@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="./styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -9,24 +10,60 @@
 </head>
 <body>
   <main class="container">
-    My balance
-  $921.48
+    <section class="account_balance">
+      <details class="balance">
+        <summary>My balance</summary>
+        <p class="amount">$921.48</p>
+      </details>
+  
+      <img src="./images/logo.svg" alt="company_logo">
+    </section>
 
-  Spending - Last 7 days
+    <section class="spending_chart">
+    <!-- <h2>Spending - Last Seven Days</h2> -->
+      <span>
+        <span class="monday"></span>
+        <figcaption>mon</figcaption>
+      </span>
+      <span>
+        <span class="tuesday"></span>
+        <figcaption>tue</figcaption>
+      </span>
+      <span>
+        <span class="wednesday"></span>
+        <figcaption>wed</figcaption>
+      </span>
+      <span>
+        <span  class="thursday"></span>
+        <figcaption>thur</figcaption>
+      </span>
+      <span>
+        <span class="friday"></span>
+        <figcaption>fri</figcaption>
+      </span>
+      <span>
+        <span class="saturday"></span>
+        <figcaption>sat</figcaption>
+      </span>
+      <span>
+        <span class="sunday"></span>
+        <figcaption>sun</figcaption>
+      </span>
+    </section>
+    
+    
+  
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+  
 
+<footer>
   Total this month
   $478.33
 
   +2.4%
   from last month
+</footer>
+
   </main>
   
 </body>
