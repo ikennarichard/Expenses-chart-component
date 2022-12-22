@@ -1,0 +1,36 @@
+/* imports------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+
+/* default-styles---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+:root {
+    
+--soft-red: hsl(10, 79%, 65%);
+--cyan: hsl(186, 34%, 60%);
+--dark-brown: hsl(25, 47%, 15%);
+--medium-brown: hsl(28, 10%, 53%);
+--cream: hsl(27, 66%, 92%);
+--very-pale-orange: hsl(33, 100%, 98%);
+--dm-sans: 'DM Sans', sans-serif;
+
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+img {
+    max-width: 100%;
+}
