@@ -15,12 +15,15 @@
 --very-pale-orange: hsl(33, 100%, 98%);
 --dm-sans: 'DM Sans', sans-serif;
 
+
 }
 
 
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -46,19 +49,19 @@ main {
     padding: 1em;
     display: grid;
     place-items: center;
-    gap: 20px;
+    gap: 13px;
 }
 
 
-.account_balance {
+.my_balance {
     border: none;
     outline: none;
     display: flex;
     justify-content: space-between;
     background-color: var(--soft-red);
     border-radius: 0.6em;
-    width: 70%;
-    height: 5em;
+    width: 100%;
+    height: 4.4em;
     align-items: center;
     padding-inline: 1em;
 }
@@ -72,21 +75,127 @@ details {
 }
 
 
-.amount {
-    margin-inline-start: .8em;
+h2 {
+    font-size: 1.3em;
+    
 }
 
 
+.amount {
+    margin-inline-start: .8em;
+    font-size: 1em;
+}
+
+
+summary {
+    padding-block-start: 0.5em;
+}
+
+/* spending chart is the container */
+
 .spending_chart {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-block: 1em;
+    padding-inline: 1em;
+    /* height: 21em; */
+    background-color: var(--very-pale-orange);
+    border-radius: 0.4em;
+    outline: none;
+}
+
+
+.spending_ {
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    /* width: 15.6em;     */
+    /* padding-inline: .1em; */
+}
+
+
+.spending_ > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     gap: 10px;
 }
 
 
-.spending_chart span {
-    width: 35px;
-    height: 200px;
-    border: 1px solid;
-    display: block;
+
+.spending_ > span > span {
+    width: 25px;
+    /* height: 100px; */
+    border-radius: .2em;
+    display: flex;
+    background-color: var(--soft-red);
 }
 
+
+.spending_ > span > figcaption {
+    display: inline-block;
+    text-align: center;
+    font-size: .7rem;
+    color: var(--medium-brown);
+    height: 1fr;
+}
+
+
+
+i {
+    border: 1px solid var(--cream);
+    margin-block-start: -0.6em;
+}
+
+
+
+/* total section */
+
+.total_ {
+    /* padding-inline: -2em; */
+    margin-block-start: -1em;
+    display: flex;
+    align-items: flex-end;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding-block: .3em;
+}
+
+
+.total_ p {
+    color: var(--medium-brown);
+    font-size: .8rem;
+}
+
+
+.total_ b {
+    color: var(--dark-brown);
+}
+
+
+.total_left {
+    line-height: 1em;
+    display: grid;
+    gap: 10px; 
+}
+
+
+
+.total_left > b {
+    font-size: 1.5rem;
+   
+}
+
+
+.total_right {
+    display: grid;
+    gap: 9px;
+    text-align: right;
+    line-height: .5em;
+}
+
+
+.total_right > b {
+    font-size: .8rem;
+}
