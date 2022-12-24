@@ -10,60 +10,65 @@
 </head>
 <body>
   <main class="container">
-    <section class="account_balance">
+    <section class="my_balance">
       <details class="balance">
         <summary>My balance</summary>
-        <p class="amount">$921.48</p>
+        <h1 class="amount">$921.48</h1>
       </details>
   
       <img src="./images/logo.svg" alt="company_logo">
     </section>
 
     <section class="spending_chart">
-    <!-- <h2>Spending - Last Seven Days</h2> -->
+    <h2>Spending - Last 7 Days</h2>
+    <!-- spending details -->
+    <div class="spending_">
       <span>
-        <span class="monday"></span>
+        <span class="monday" id="mon"></span>
         <figcaption>mon</figcaption>
       </span>
       <span>
-        <span class="tuesday"></span>
+        <span class="tuesday" id="tue"></span>
         <figcaption>tue</figcaption>
       </span>
       <span>
-        <span class="wednesday"></span>
+        <span class="wednesday" id="wed"></span>
         <figcaption>wed</figcaption>
       </span>
       <span>
-        <span  class="thursday"></span>
-        <figcaption>thur</figcaption>
+        <span  class="thursday" id="thu"></span>
+        <figcaption>thu</figcaption>
       </span>
       <span>
-        <span class="friday"></span>
+        <span class="friday" id="fri"></span>
         <figcaption>fri</figcaption>
       </span>
       <span>
-        <span class="saturday"></span>
+        <span class="saturday" id="sat"></span>
         <figcaption>sat</figcaption>
       </span>
       <span>
-        <span class="sunday"></span>
+        <span class="sunday" id="sun" value="13.95"></span>
         <figcaption>sun</figcaption>
       </span>
+     
+    </div>
+    <i></i>
+    <!-- total from last month and this month -->
+    <div class="total_">
+      <div class="total_left">
+        <p class="total_this_month">Total this month</p>
+     <b>$478.33</b>
+      </div>
+     <div class="total_right">
+      <b>+2.4%</b>
+      <p>from last month</p> 
+     </div>
+
+  
+    </div>
+      
     </section>
-    
-    
-  
-
-  
-
-<footer>
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-</footer>
-
   </main>
   
 </body>
