@@ -186,13 +186,9 @@ summary {
 
 
 
-#wed {
-    background-color: var(--cyan);
-  }
-
-#wed:hover {
+/* #wed:hover {
     background-color: var(--light-cyan);
-  }
+  } */
 
 
 .spending_ > span > span:hover::before {
@@ -340,7 +336,7 @@ i {
     }
 
     summary {
-      font-size: 1emgit;
+      font-size: 1em;
     }
 
     h1 {
