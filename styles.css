@@ -8,6 +8,7 @@
 :root {
 
 --soft-red: hsl(10, 79%, 65%);
+--light-red: hsla(10, 79%, 65%, 0.688);
 --light-cyan:  hsla(186, 34%, 60%, 0.404);
 --cyan: hsl(186, 34%, 60%);
 --dark-brown: hsl(25, 47%, 15%);
@@ -45,13 +46,38 @@ img {
 
 /* main-styles -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.flex {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .column {
+    flex-direction: column;
+  }
+  
+  .center {
+    align-items: center;
+  }
+  
+  .between {
+    justify-content: space-between;
+  }
+  
+  .justify {
+    justify-content: center;
+  }
+
+
+
+
 main {
-    border: 1px solid blue;
     padding: 1em;
     display: grid;
     place-items: center;
     gap: 13px;
+    position: relative;
 }
+
 
 
 .my_balance {
@@ -65,7 +91,12 @@ main {
     height: 4.4em;
     align-items: center;
     padding-inline: 1em;
+    opacity: 0;
+    animation: come_down 1s forwards 2.6s;
 }
+
+
+
 
 
 
@@ -124,7 +155,11 @@ summary {
     align-items: center;
     gap: 7px;
     margin-block-start: 1em;
+    opacity: 0;
+    animation: appear 2s ease-in-out 2.5s forwards;
 }
+
+
 
 
 
@@ -229,6 +264,84 @@ i {
 .total_right > b {
     font-size: .8rem;
 }
+
+
+/* Loader */
+.loader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--soft-red);
+    animation: dis 1s forwards 2.6s;
+  }
+
+  .loader .icon {
+    animation: spin 3s forwards 0.5s;
+  }
+  .loader .icon #logo {
+    width: 8em;
+  }
+
+  
+  
+  
+  /* animations */
+
+
+  @keyframes come_down {
+
+
+    25% {
+            transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+  @keyframes dis {
+
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+
+  @keyframes spin {
+
+    
+    25% {
+        transform: rotate(360deg);
+      }
+
+    100% {
+        transform: translateX(-190px);
+      } 
+}
+
+
+@keyframes appear {
+    
+    0% {
+        transform: translateX(10px);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0px);
+        opacity: 1;
+      }
+    }
+
+
+    
+
+
+    /* media queries */
 
 
 @media (min-width: 768px) {
