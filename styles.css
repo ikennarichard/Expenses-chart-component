@@ -175,6 +175,7 @@ summary {
     border-radius: .2em;
     display: flex;
     background-color: var(--soft-red);
+    position: relative;
 }
 
 
@@ -338,13 +339,17 @@ i {
        
     }
 
+    summary {
+      font-size: 1emgit;
+    }
+
     h1 {
         font-size: 1.5em;
         margin-inline-start: 8px;
     }
 
     .spending_chart {
-        width: 20em;
+        width: 22em;
         padding-block-end: 2em;
     }
     
