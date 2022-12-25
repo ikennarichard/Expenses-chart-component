@@ -48,25 +48,31 @@ img {
 
 .flex {
     display: flex;
-    gap: 1rem;
-  }
-  
-  .column {
-    flex-direction: column;
   }
   
   .center {
     align-items: center;
   }
   
-  .between {
-    justify-content: space-between;
-  }
-  
   .justify {
     justify-content: center;
   }
 
+
+  /* Loader */
+.loader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: var(--soft-red);
+  animation: dis 1s forwards 2.6s;
+}
+
+.loader .icon {
+  animation: spin 3s forwards 0.5s;
+}
 
 
 
@@ -164,7 +170,6 @@ summary {
 
 
 .spending_ > span > span {
-    position: relative;
     width: 26px;
     /* height: 100px; */
     border-radius: .2em;
@@ -173,7 +178,7 @@ summary {
 }
 
 
-.spending_ > span > :hover {
+.spending_ > span > span:hover {
     cursor: pointer;
     background-color: #ff9a8649;
   }
@@ -184,7 +189,7 @@ summary {
     background-color: var(--cyan);
   }
 
-  #wed:hover {
+#wed:hover {
     background-color: var(--light-cyan);
   }
 
@@ -196,7 +201,7 @@ summary {
     font-size: 0.7em;
     color: white;
     padding: 0.6em;
-    background-color: hsl(25deg, 47%, 15%);
+    background-color: var(--dark-brown);
     border-radius: .3em;
     position: absolute;
     top: -3rem;
@@ -205,7 +210,7 @@ summary {
 
 
 
-.spending_ > span > figcaption {
+.spending_ > span > .days {
     display: inline-block;
     text-align: center;
     font-size: .7rem;
@@ -265,24 +270,6 @@ i {
     font-size: .8rem;
 }
 
-
-/* Loader */
-.loader {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: var(--soft-red);
-    animation: dis 1s forwards 2.6s;
-  }
-
-  .loader .icon {
-    animation: spin 3s forwards 0.5s;
-  }
-  .loader .icon #logo {
-    width: 8em;
-  }
 
   
   

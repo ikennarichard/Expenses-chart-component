@@ -64,21 +64,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+An element with position: fixed; is positioned relative to the viewport, it always stays in the same place even if the page is scrolled, unlike absolute which is relative to its closest assestor with positio relative.
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
 .proud-of-this-css {
   color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
 }
 ```
 
