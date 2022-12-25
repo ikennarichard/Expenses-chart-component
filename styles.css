@@ -8,6 +8,7 @@
 :root {
 
 --soft-red: hsl(10, 79%, 65%);
+--light-cyan:  hsla(186, 34%, 60%, 0.404);
 --cyan: hsl(186, 34%, 60%);
 --dark-brown: hsl(25, 47%, 15%);
 --medium-brown: hsl(28, 10%, 53%);
@@ -70,25 +71,26 @@ main {
 
 details {
     color: var(--cream);
-    padding-block-start: 0.5em;
-
 }
 
 
 h2 {
-    font-size: 1.3em;
-    
+    font-size: 1.08em;
+    text-align: left;
+
 }
 
 
-.amount {
-    margin-inline-start: .8em;
-    font-size: 1em;
+h1 {
+    margin-inline-start: .5em;
+    margin-block-start: .3em;
+    font-size: 1.2em;
 }
 
 
 summary {
     padding-block-start: 0.5em;
+    font-size: .8em;
 }
 
 /* spending chart is the container */
@@ -99,7 +101,6 @@ summary {
     gap: 30px;
     padding-block: 1em;
     padding-inline: 1em;
-    /* height: 21em; */
     background-color: var(--very-pale-orange);
     border-radius: 0.4em;
     outline: none;
@@ -108,8 +109,9 @@ summary {
 
 .spending_ {
     display: flex;
-    gap: 7px;
-    justify-content: center;
+    gap: 13px;
+    justify-content: space-around;
+    margin-block-start: 1em;
     /* width: 15.6em;     */
     /* padding-inline: .1em; */
 }
@@ -119,13 +121,16 @@ summary {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 10px;
+    align-items: center;
+    gap: 7px;
+    margin-block-start: 1em;
 }
 
 
 
 .spending_ > span > span {
-    width: 25px;
+    position: relative;
+    width: 26px;
     /* height: 100px; */
     border-radius: .2em;
     display: flex;
@@ -133,12 +138,43 @@ summary {
 }
 
 
+.spending_ > span > :hover {
+    cursor: pointer;
+    background-color: #ff9a8649;
+  }
+
+
+
+#wed {
+    background-color: var(--cyan);
+  }
+
+  #wed:hover {
+    background-color: var(--light-cyan);
+  }
+
+
+.spending_ > span > span:hover::before {
+    content: attr(data-amount);
+    /* width: 1em; */
+    font-weight: 700;
+    font-size: 0.7em;
+    color: white;
+    padding: 0.6em;
+    background-color: hsl(25deg, 47%, 15%);
+    border-radius: .3em;
+    position: absolute;
+    top: -3rem;
+    margin-inline-start: -0.8em;
+  }
+
+
+
 .spending_ > span > figcaption {
     display: inline-block;
     text-align: center;
     font-size: .7rem;
     color: var(--medium-brown);
-    height: 1fr;
 }
 
 
@@ -153,11 +189,9 @@ i {
 /* total section */
 
 .total_ {
-    /* padding-inline: -2em; */
     margin-block-start: -1em;
     display: flex;
-    align-items: flex-end;
-    /* flex-direction: column; */
+    align-items: center;
     justify-content: space-between;
     padding-block: .3em;
 }
@@ -165,7 +199,7 @@ i {
 
 .total_ p {
     color: var(--medium-brown);
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
 
@@ -175,27 +209,54 @@ i {
 
 
 .total_left {
-    line-height: 1em;
     display: grid;
-    gap: 10px; 
 }
 
 
 
 .total_left > b {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
    
 }
 
 
 .total_right {
-    display: grid;
-    gap: 9px;
+    margin-block-start: .6em;
     text-align: right;
-    line-height: .5em;
 }
 
 
 .total_right > b {
     font-size: .8rem;
+}
+
+
+@media (min-width: 768px) {
+
+    .total_left > b {
+        font-size: 2rem;
+       
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-inline-start: 8px;
+    }
+
+    .spending_chart {
+        width: 20em;
+        padding-block-end: 2em;
+    }
+    
+    .spending_ {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .spending_ > span > span {
+        width: 30px;
+        border-radius: .2em;
+        display: flex;
+        background-color: var(--soft-red);
+    }
 }
