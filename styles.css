@@ -98,7 +98,7 @@ main {
     align-items: center;
     padding-inline: 1em;
     opacity: 0;
-    animation: come_down 1s forwards 2.6s;
+    animation: shift 1s forwards 2.6s;
 }
 
 
@@ -186,11 +186,6 @@ summary {
 
 
 
-/* #wed:hover {
-    background-color: var(--light-cyan);
-  } */
-
-
 .spending_ > span > span:hover::before {
     content: attr(data-amount);
     /* width: 1em; */
@@ -274,7 +269,7 @@ i {
   /* animations */
 
 
-  @keyframes come_down {
+  @keyframes shift {
 
 
     25% {
