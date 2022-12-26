@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution Url](https://github.com/ikennarichard/Expenses-chart-component)
+- [Live site url](https://ikennarichard.github.io/Expenses-chart-component/)
 
 ## My process
 
